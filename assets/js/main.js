@@ -56,7 +56,7 @@ class ValidaCNPJ {
         });
 
         const digito = totalCnpj % 11;
-        return digito < 2 ? 0 : String(11 - digito);
+        return digito < 2 ? '0' : String(11 - digito);
     }
 
     isSequencia() {
@@ -92,7 +92,7 @@ class ValidaCPF {
         }, 0);
 
         const digito = 11 - (total % 11);
-        return digito > 9 ? 0 : String(digito);
+        return digito > 9 ? '0' : String(digito);
     }
 
     isSequencia() {
